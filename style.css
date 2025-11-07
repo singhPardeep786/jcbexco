@@ -57,6 +57,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'roman';
 }
 
 html, body {
@@ -68,6 +69,7 @@ html, body {
     --orange: #FCB025;
     --black: #000;
     --white: #ffffff;
+    --lightgray: #F2F2F2;
 }
 
 
@@ -149,5 +151,202 @@ html, body {
 
 /*----========NAVBAR END=========----*/
 
-/*----========NAVBAR END=========----*/
-/*----========NAVBAR END=========----*/
+/*----========BANNER START=========----*/
+
+.banner_bg {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 0 4rem 0;
+    background-image: url('./images/banner_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.signup_btn {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.5rem 2.5rem;
+    font-size: 1.3rem;
+    border: none;
+    font-family: 'boldCondensed';
+    text-transform: uppercase;
+}
+
+/*----========BANNER END=========----*/
+
+
+/*----========SECTION SECOND START=========----*/
+
+.excon_section h2 {
+    font-family: 'boldCondensed';
+}
+
+.excon_section p {
+    font-size: 1.01rem;
+}
+
+.highlights_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    place-items: center;
+}
+
+@media (max-width: 991.98px) {
+    .highlights_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.highlights_box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--lightgray);
+    padding: 2.5rem 2rem;
+}
+
+.highlights_box h3 {
+    font-family: 'boldCondensed';
+}
+
+.highlights_box p {
+    font-size: 1rem;
+    margin-top: 1.3rem;
+}
+
+.highlights_box ol li {
+    margin-top: 1.5rem;
+}
+
+
+/*----========SECTION SECOND END=========----*/
+
+
+/*----========SECTION THIRD START=========----*/
+
+.heading {
+    font-family: 'boldCondensed';
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slider_img {
+    width: 100%;
+    height: 300px;
+    /* border-radius: 2rem; */
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .slider_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    display: none;
+  }
+
+  .left_icon,
+  .right_icon {
+    width: 80px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50%; */
+    padding: 0 1.4rem;
+    background-color: var(--lightgray);
+    transition: all ease 0.5s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .left_icon::after,
+  .right_icon::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 300%;
+    background-color: var(--blue);
+    /* border-radius: 50%; */
+    bottom: -300%;
+    left: -50%;
+    transition: all ease 0.5s;
+    z-index: -1;
+  }
+
+  .left_icon:hover::after,
+  .right_icon:hover::after {
+    bottom: -180%;
+  }
+
+  .right_icon img {
+    transform: rotate(180deg);
+  }
+
+  .left_icon:active,
+  .right_icon:active {
+    scale: 0.9;
+  }
+
+  .swiper_padding {
+    padding-bottom: 5rem!important;
+  }
+  
+  .slider_navigation {
+    width: 5rem;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-button-next, .swiper-button-prev {
+    top: 95%!important;
+  }
+
+  .swiper-button-prev {
+    left: 0%!important;
+    /* transform: translateX(-47%); */
+  }
+
+  .swiper-button-next {
+    right: 0%!important;
+    /* transform: translateX(-47%); */
+  }
+
+/*----========SECTION THIRD END=========----*/
