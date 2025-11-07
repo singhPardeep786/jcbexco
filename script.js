@@ -96,9 +96,9 @@ function swiperSlider4(){
         spaceBetween: 10,
         speed: 1000,
         loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           },
           breakpoints: {
             480: {
