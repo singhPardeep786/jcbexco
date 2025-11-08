@@ -122,7 +122,7 @@ body.no-scroll {
 }
 
 .form-container {
-    max-width: 620px;
+    max-width: 60%;
     width: 94vw;
     background-color: var(--white);
     border-radius: 10px;
