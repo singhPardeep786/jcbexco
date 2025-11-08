@@ -131,7 +131,7 @@ body.no-scroll {
     scale: 0;
     position: relative;
     margin: 32px auto;
-    transition: all 0.5s cubic-bezier(.39,.18,.05,1.04);
+    transition: scale 0.5s cubic-bezier(.39,.18,.05,1.04);
     transition-delay: 0.2s;
     display: flex;
     flex-direction: column;
@@ -371,6 +371,187 @@ body.no-scroll {
 }
 
 /*----======== SIGNUP FORM END =========----*/
+
+
+/*----======== DOWNLOAD BROCHURE FORM START =========----*/
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.trigger-btn {
+    background: #1a1a1a;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.trigger-btn:hover {
+    background: #333;
+}
+
+.form-overlay2 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.form-overlay2.active {
+    display: flex;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.form-container2 {
+    background: var(--white);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.form-overlay2.active .form-container2 {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.form-header2 {
+    background: #1a1a1a;
+    color: white;
+    padding: 20px 30px;
+}
+
+.form-header2 h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.form-content2 {
+    padding: 30px;
+    position: relative;
+}
+
+.close-btn2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.close-btn2:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+.language-section {
+    margin-bottom: 25px;
+}
+
+.language-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.language-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.language-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #f5a623;
+}
+
+.language-option span {
+    font-size: 16px;
+    color: #333;
+}
+
+.form-row2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.form-group1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group1 label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group1 input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.form-group1 input:focus {
+    outline: none;
+    border-color: #f5a623;
+}
+
+
+@media (max-width: 600px) {
+    .form-row2 {
+        grid-template-columns: 1fr;
+    }
+
+    .language-options {
+        flex-direction: column;
+    }
+
+    .form-content2 {
+        padding: 20px;
+    }
+}
+
+/*----======== DOWNLOAD BROCHURE FORM END =========----*/
 
 
 /*----======== NAVBAR START =========----*/
