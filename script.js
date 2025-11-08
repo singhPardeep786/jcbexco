@@ -124,14 +124,16 @@ swiperSlider4();
 
 function signUpForm() {
     const formOverlay = document.querySelector(".form-overlay");
-    const openForm = document.querySelector(".signup_btn");
+    const openForms = document.querySelectorAll(".signup_btn");
     const closeForm = document.querySelector(".close-btn");
     const submitBtn = document.querySelector(".submit_btn");
     
-    // Open form
-    openForm.addEventListener('click', () => {
-        formOverlay.classList.add('active');
-        document.body.classList.add('no-scroll');
+    // Open form for each signup_btn
+    openForms.forEach(btn => {
+        btn.addEventListener('click', () => {
+            formOverlay.classList.add('active');
+            document.body.classList.add('no-scroll');
+        });
     });
     
     // Close form function
@@ -166,3 +168,58 @@ function signUpForm() {
 }
 
 signUpForm();
+
+
+function brouchureForm() {
+    // Open form handler (internal, not window-bound anymore)
+    function openBrochureForm() {
+        const overlay = document.getElementById('formOverlay2');
+        overlay.style.display = 'flex';
+        document.body.classList.add('no-scroll');
+
+        // Trigger reflow to enable transition
+        setTimeout(() => {
+            overlay.classList.add('active');
+        }, 10);
+    }
+
+    // Close form handler
+    window.closeForm = function() {
+        const overlay = document.getElementById('formOverlay2');
+        overlay.classList.remove('active');
+
+        // Wait for transition to complete before hiding
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+        }, 300);
+    }
+
+    // Attach open handler to all .brochure_btn buttons
+    document.querySelectorAll('.brochure_btn').forEach(btn => {
+        btn.addEventListener('click', openBrochureForm);
+    });
+
+    // Close form when clicking outside the form container
+    document.getElementById('formOverlay2').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeForm();
+        }
+    });
+
+    window.downloadBrochure = function() {
+        const language = document.querySelector('input[name="language"]:checked').value;
+        alert(`Downloading brochure in ${language}`);
+        closeForm();
+    }
+
+    // Close form with Escape key
+    document.addEventListener('keydown', function(e) {
+        const overlay = document.getElementById('formOverlay2');
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            closeForm();
+        }
+    });
+}
+
+brouchureForm();
