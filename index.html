@@ -7,8 +7,6 @@
     <link rel="icon" href="./images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 
-    <!---LENIS CSS--->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.14/dist/lenis.css"> -->
 
     <!---BOOTSTRAP CSS--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -33,7 +31,7 @@
                     <div class="form-row">
                         <div class="form-group1">
                             <label>First Name</label>
-                            <input type="text" placeholder="Enter First Name">
+                            <input type="text" placeholder="Enter First Name" required>
                         </div>
                         <div class="form-group1">
                             <label>Last Name</label>
@@ -46,7 +44,7 @@
                             <label>Mobile Number</label>
                             <div class="mobile-input-wrapper">
                                 <span class="country-code">+91</span>
-                                <input type="number" placeholder="">
+                                <input type="number" placeholder="" required>
                             </div>
                         </div>
                         <div class="form-group1">
@@ -125,6 +123,7 @@
                     </div>
                     <div class="d-none d-lg-block">
                         <ul class="nav-links1 d-flex align-items-center mt-3 p-2">
+                            <li><a href="#">HOME</a></li>
                             <li><a href="plp.html">PRODUCTS</a></li>
                             <li><a href="#">INDUSTRIES</a></li>
                             <li><a href="#">SERVICE & PARTS</a></li>
@@ -680,13 +679,6 @@
     
     <script src="./script.js"></script>
 
-    <!-- <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script> 
-    <script>
-      // Initialize Lenis
-        const lenis = new Lenis({
-          autoRaf: true,
-        });
-    </script> -->
     
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
