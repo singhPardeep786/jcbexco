@@ -121,3 +121,22 @@ function swiperSlider4(){
       });
 }
 swiperSlider4();
+
+function signUpForm(){
+    const formContainer = document.querySelector(".form-container");
+    const openForm = document.querySelector(".signup_btn");
+    openForm.addEventListener('click', ()=>{
+        formContainer.style.top = "0%";
+        formContainer.style.scale = 1;
+    })
+    
+    const closeForm = document.querySelector(".close-btn");
+    closeForm.addEventListener('click', ()=>{
+        formContainer.style.top = "-100%";
+        formContainer.style.scale = 0;
+    })
+    // function openSignUpForm(){
+    // }
+    // openSignUpForm();
+}
+signUpForm();
