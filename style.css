@@ -318,6 +318,7 @@ html, body {
 
 .logo {
     width: 7%;
+    transition: all ease 0.5s;
 }
 
 .nav-links1 {
@@ -341,6 +342,26 @@ html, body {
     color: #2b2b2b;
 }
 
+@media (min-width: 300px) and (max-width: 600px){
+    .logo {
+        width: 30%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+    .logo {
+        width: 30%;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    .logo {
+        width: 20%;
+        margin: 0.5rem 0;
+    }
+}
 
 /*----========NAVBAR END=========----*/
 
@@ -626,7 +647,7 @@ html, body {
 @media (max-width: 991.98px) {
     .engage_grid_container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 180px);
+        grid-template-rows: repeat(3, 330px);
         grid-template-areas:
             "box1 box1"
             "box2 box3"
@@ -638,7 +659,7 @@ html, body {
 @media (max-width: 575.98px) {
     .engage_grid_container {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, 140px);
+        grid-template-rows: repeat(3, 350px);
         grid-template-areas:
             "box1"
             "box2"
@@ -929,6 +950,7 @@ html, body {
 
 /* Additional responsive for smaller tablets and mobile */
 @media (max-width: 767.98px) {
+    
     .plp-filter-btn {
         padding: 0.5rem 1rem;
         font-size: 0.8rem;
