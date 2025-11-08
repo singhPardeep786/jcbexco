@@ -126,8 +126,13 @@ function signUpForm(){
     const formContainer = document.querySelector(".form-container");
     const openForm = document.querySelector(".signup_btn");
     openForm.addEventListener('click', ()=>{
-        formContainer.style.top = "0%";
-        formContainer.style.scale = 1;
+        if(formContainer.style.top === "0%" && formContainer.style.scale === "1"){
+            formContainer.style.top = "-100%";
+            formContainer.style.scale = 0;
+        }else{
+            formContainer.style.top = "0%";
+            formContainer.style.scale = 1;
+        }
     })
     
     const closeForm = document.querySelector(".close-btn");
@@ -135,8 +140,5 @@ function signUpForm(){
         formContainer.style.top = "-100%";
         formContainer.style.scale = 0;
     })
-    // function openSignUpForm(){
-    // }
-    // openSignUpForm();
 }
 signUpForm();
