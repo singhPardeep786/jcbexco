@@ -122,23 +122,47 @@ function swiperSlider4(){
 }
 swiperSlider4();
 
-function signUpForm(){
-    const formContainer = document.querySelector(".form-container");
+function signUpForm() {
+    const formOverlay = document.querySelector(".form-overlay");
     const openForm = document.querySelector(".signup_btn");
-    openForm.addEventListener('click', ()=>{
-        if(formContainer.style.top === "0%" && formContainer.style.scale === "1"){
-            formContainer.style.top = "-100%";
-            formContainer.style.scale = 0;
-        }else{
-            formContainer.style.top = "0%";
-            formContainer.style.scale = 1;
-        }
-    })
-    
     const closeForm = document.querySelector(".close-btn");
-    closeForm.addEventListener('click', ()=>{
-        formContainer.style.top = "-100%";
-        formContainer.style.scale = 0;
-    })
+    const submitBtn = document.querySelector(".submit_btn");
+    
+    // Open form
+    openForm.addEventListener('click', () => {
+        formOverlay.classList.add('active');
+        document.body.classList.add('no-scroll');
+    });
+    
+    // Close form function
+    function closeFormHandler() {
+        formOverlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    }
+    
+    // Close button
+    closeForm.addEventListener('click', closeFormHandler);
+    
+    // Close when clicking on overlay background
+    formOverlay.addEventListener('click', (e) => {
+        if (e.target === formOverlay) {
+            closeFormHandler();
+        }
+    });
+    
+    // Close with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && formOverlay.classList.contains('active')) {
+            closeFormHandler();
+        }
+    });
+    
+    // Handle form submission
+    submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Form submitted successfully!');
+        closeFormHandler();
+    });
 }
+
 signUpForm();
