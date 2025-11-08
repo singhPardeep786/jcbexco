@@ -6,86 +6,137 @@
     <title>JCB Exco - Products</title>
     <link rel="icon" href="./images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <!---LENIS CSS--->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.14/dist/lenis.css"> -->
+  
     <!---BOOTSTRAP CSS--->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <main class="plp-main">
-        <!--============SIGNUP FORM START==========--->
 
-    <!-- <div class="form-container">
-        <div class="form-header">
-            <h1>Sign-up Form</h1>
-        </div>
+        <!--============OFFER FORM START==========--->
+
+        <div class="form-overlay">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Get Offer Form</h1>
+                </div>
+                
+                <div class="form-content position-relative">
+                    <button class="close-btn">✕</button>
+                    <div class="form-row">
+                        <div class="form-group1">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="form-group1">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Enter Last Name">
+                        </div>
+                    </div>
         
-        <div class="form-content position-relative">
-            <button class="close-btn">✕</button>
-            <div class="form-row">
-                <div class="form-group1">
-                    <label>First Name</label>
-                    <input type="text" placeholder="Enter First Name">
-                </div>
-                <div class="form-group1">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="Enter Last Name">
+                    <div class="form-row">
+                        <div class="form-group1">
+                            <label>Mobile Number</label>
+                            <div class="mobile-input-wrapper">
+                                <span class="country-code">+91</span>
+                                <input type="number" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="form-group1">
+                            <label>Product Category</label>
+                            <div class="select-wrapper">
+                                <select>
+                                    <option value="" class="select_label_color">Select Product Category</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="clothing">Clothing</option>
+                                    <option value="food">Food & Beverage</option>
+                                    <option value="books">Books</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="form-row">
+                        <div class="form-group1">
+                            <label>City</label>
+                            <div class="select-wrapper">
+                                <select>
+                                    <option value="" class="select_label_color">Select City</option>
+                                    <option value="mumbai">Mumbai</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="bangalore">Bangalore</option>
+                                    <option value="kolkata">Kolkata</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group1">
+                            <label>State</label>
+                            <div class="select-wrapper">
+                                <select>
+                                    <option value="">Select State</option>
+                                    <option value="maharashtra">Maharashtra</option>
+                                    <option value="delhi">Delhi</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="west-bengal">West Bengal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit_btn">Submit</button>
                 </div>
             </div>
-
-            <div class="form-row">
-                <div class="form-group1">
-                    <label>Mobile Number</label>
-                    <div class="mobile-input-wrapper">
-                        <span class="country-code">+91</span>
-                        <input type="number" placeholder="">
-                    </div>
-                </div>
-                <div class="form-group1">
-                    <label>Product Category</label>
-                    <div class="select-wrapper">
-                        <select>
-                            <option value="" class="select_label_color">Select Product Category</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="clothing">Clothing</option>
-                            <option value="food">Food & Beverage</option>
-                            <option value="books">Books</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group1">
-                    <label>City</label>
-                    <div class="select-wrapper">
-                        <select>
-                            <option value="" class="select_label_color">Select City</option>
-                            <option value="mumbai">Mumbai</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="bangalore">Bangalore</option>
-                            <option value="kolkata">Kolkata</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group1">
-                    <label>State</label>
-                    <div class="select-wrapper">
-                        <select>
-                            <option value="">Select State</option>
-                            <option value="maharashtra">Maharashtra</option>
-                            <option value="delhi">Delhi</option>
-                            <option value="karnataka">Karnataka</option>
-                            <option value="west-bengal">West Bengal</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="submit_btn">Submit</button>
         </div>
-    </div> -->
     
-    <!--============SIGNUP FORM END==========--->
+    <!--============OFFER FORM END==========--->
+
+        <!--============DOWNLOAD BROCHURE START==========--->
+
+    <div class="form-overlay2" id="formOverlay2">
+        <div class="form-container2">
+            <div class="form-header2">
+                <h1>Download Brochure</h1>
+            </div>
+            
+            <div class="form-content2 position-relative">
+                <button class="close-btn2" onclick="closeForm()">✕</button>
+                <div class="form-row2">
+                    <div class="language-section">
+                        <label>Language</label>
+                        <div class="language-options">
+                            <label class="language-option">
+                                <input type="radio" name="language" value="tamil" checked>
+                                <span>Tamil</span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="telugu">
+                                <span>Telegu</span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="malayalam">
+                                <span>Malayalam</span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="kannada">
+                                <span>Kannada</span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="hindi">
+                                <span>Hindi</span>
+                            </label>
+                            <label class="language-option">
+                                <input type="radio" name="language" value="english">
+                                <span>English</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+    
+                <button type="submit" class="submit_btn" onclick="downloadBrochure()">Download Brochure</button>
+            </div>
+        </div>
+    </div>
+    
+    <!--============DOWNLOAD BROCHURE END==========--->
         
         <!--============ NAVBAR START==========--->
     
@@ -167,8 +218,8 @@
                         </div>
                         <div class="plp-product-name">3DX PLUS</div>
                         <div class="plp-product-actions">
-                            <button class="plp-action-btn">DOWNLOAD BROCHURE</button>
-                            <button class="plp-action-btn">GET OFFER</button>
+                            <button class="plp-action-btn brochure_btn">DOWNLOAD BROCHURE</button>
+                            <button class="plp-action-btn signup_btn">GET OFFER</button>
                             <button class="plp-action-btn">KNOW MORE</button>
                         </div>
                     </div>
@@ -179,8 +230,8 @@
                         </div>
                         <div class="plp-product-name">3DX PLUS</div>
                         <div class="plp-product-actions">
-                            <button class="plp-action-btn">DOWNLOAD BROCHURE</button>
-                            <button class="plp-action-btn">GET OFFER</button>
+                            <button class="plp-action-btn brochure_btn">DOWNLOAD BROCHURE</button>
+                            <button class="plp-action-btn signup_btn">GET OFFER</button>
                             <button class="plp-action-btn">KNOW MORE</button>
                         </div>
                     </div>
@@ -191,8 +242,8 @@
                         </div>
                         <div class="plp-product-name">3DX PLUS</div>
                         <div class="plp-product-actions">
-                            <button class="plp-action-btn">DOWNLOAD BROCHURE</button>
-                            <button class="plp-action-btn">GET OFFER</button>
+                            <button class="plp-action-btn brochure_btn">DOWNLOAD BROCHURE</button>
+                            <button class="plp-action-btn signup_btn">GET OFFER</button>
                             <button class="plp-action-btn">KNOW MORE</button>
                         </div>
                     </div>
@@ -203,8 +254,8 @@
                         </div>
                         <div class="plp-product-name">3DX PLUS</div>
                         <div class="plp-product-actions">
-                            <button class="plp-action-btn">DOWNLOAD BROCHURE</button>
-                            <button class="plp-action-btn">GET OFFER</button>
+                            <button class="plp-action-btn brochure_btn">DOWNLOAD BROCHURE</button>
+                            <button class="plp-action-btn signup_btn">GET OFFER</button>
                             <button class="plp-action-btn">KNOW MORE</button>
                         </div>
                     </div>
@@ -215,8 +266,8 @@
                         </div>
                         <div class="plp-product-name">3DX PLUS</div>
                         <div class="plp-product-actions">
-                            <button class="plp-action-btn">DOWNLOAD BROCHURE</button>
-                            <button class="plp-action-btn">GET OFFER</button>
+                            <button class="plp-action-btn brochure_btn">DOWNLOAD BROCHURE</button>
+                            <button class="plp-action-btn signup_btn">GET OFFER</button>
                             <button class="plp-action-btn">KNOW MORE</button>
                         </div>
                     </div>
@@ -227,8 +278,8 @@
                         </div>
                         <div class="plp-product-name">3DX PLUS</div>
                         <div class="plp-product-actions">
-                            <button class="plp-action-btn">DOWNLOAD BROCHURE</button>
-                            <button class="plp-action-btn">GET OFFER</button>
+                            <button class="plp-action-btn brochure_btn">DOWNLOAD BROCHURE</button>
+                            <button class="plp-action-btn signup_btn">GET OFFER</button>
                             <button class="plp-action-btn">KNOW MORE</button>
                         </div>
                     </div>
@@ -278,13 +329,6 @@
         
         <script src="./script.js"></script>
     
-        <!-- <script src="https://unpkg.com/lenis@1.3.14/dist/lenis.min.js"></script> 
-        <script>
-          // Initialize Lenis
-            const lenis = new Lenis({
-              autoRaf: true,
-            });
-        </script> -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
 </html>
