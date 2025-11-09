@@ -930,7 +930,8 @@ body.no-scroll {
     display: grid;
     width: 100%;
     margin: 2rem auto;  
-    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    /* Make box1 slightly bigger in width on big screens */
+    grid-template-columns: 1.7fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 200px);
     gap: 1.5rem;
     grid-template-areas:
