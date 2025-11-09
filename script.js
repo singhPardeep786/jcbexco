@@ -9,6 +9,10 @@ function swiperSlider(){
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
         breakpoints: {
             480: {
                 slidesPerView: 2,
@@ -41,6 +45,10 @@ function swiperSlider2(){
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
         breakpoints: {
             480: {
                 slidesPerView: 1,
@@ -69,6 +77,10 @@ function swiperSlider3(){
             el: ".swiper-pagination",
             clickable: true,
           },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
           breakpoints: {
             480: {
                 slidesPerView: 2,
@@ -101,6 +113,10 @@ function swiperSlider4(){
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: true,
+      },
           breakpoints: {
             480: {
                 slidesPerView: 2,
