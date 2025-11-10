@@ -12,6 +12,7 @@ function brochureFormHandler() {
     // Close Brochure Form
     function closeBrochureForm() {
         const overlay = document.getElementById('formOverlay2');
+        if (!overlay) return;
         overlay.classList.remove('active');
         setTimeout(() => {
             overlay.style.display = 'none';
@@ -19,8 +20,9 @@ function brochureFormHandler() {
         }, 300);
     }
 
-    // Expose closeBrochureForm globally for callbacks
-    window.closeBrochureForm = closeBrochureForm;
+    // Expose closeBrochureForm globally for callbacks (for onclick in HTML)
+    window.closeForm = closeBrochureForm;
+    window.closeBrochureForm = closeBrochureForm; // For compatibility
 
     // Attach open handler to all .brochure_btn buttons
     document.querySelectorAll('.brochure_btn').forEach(btn => {
@@ -29,12 +31,21 @@ function brochureFormHandler() {
 
     // Close form when clicking outside the form container
     const overlayBro = document.getElementById('formOverlay2');
-    if(overlayBro) {
+    if (overlayBro) {
         overlayBro.addEventListener('click', function(e) {
             if (e.target === this) {
                 closeBrochureForm();
             }
         });
+
+        // Also close the form when .close-btn2 is clicked
+        const closeBtn2 = overlayBro.querySelector('.close-btn2');
+        if (closeBtn2) {
+            closeBtn2.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeBrochureForm();
+            });
+        }
     }
 
     // Sample handler for downloading brochure
